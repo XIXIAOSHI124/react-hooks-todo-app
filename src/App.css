@@ -1,10 +1,21 @@
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 6vmin;
   pointer-events: none;
+}
+
+.App-header p {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,7 +26,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +36,87 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.main {
+  width: 50%;
+  margin: 1rem auto;
+}
+
+@media (max-width: 798px) {
+  .main {
+    width: 90%;
+  }
+}
+
+.task-box input[type="text"] {
+  box-sizing: border-box;
+  line-height: 2rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  width: calc(100% - 100px);
+}
+
+.task-box button {
+  width: 90px;
+  line-height: 2rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin-left: 10px;
+  border: 1px solid #6fc8df;
+  border-radius: .5rem;
+  color: #fff;
+  background-color: #61dafb;
+}
+
+.clean {
+  clear: both;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  display: block;
+  border: 1px solid #dddddd;
+  border-radius: .5rem;
+  height: 1.5rem;
+  padding: .5rem 1rem;
+  margin-bottom: .5rem;
+}
+
+.number,
+.content {
+  display: inline-block;
+  line-height: 1.5rem;
+  float: left;
+  margin-right: .5rem;
+}
+
+.action {
+  display: inline-block;
+  line-height: 1.5rem;
+  float: right;
+  margin-right: .5rem;
+}
+
+.action button {
+  border: 1px solid #ffe600;
+  border-radius: .5rem;
+  color: #fff;
+  background-color: #fffb00;
+}
+
+.number::before {
+  content: "#";
+  font-weight: 700;
+}
+
+.content p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 @keyframes App-logo-spin {
