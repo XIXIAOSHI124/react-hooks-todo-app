@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoTask from './TodoTask';
 
 export default function TodoList({todos}) {
   console.log('render todo list');
@@ -8,18 +9,13 @@ export default function TodoList({todos}) {
       {
         todos && todos.length > 0 &&
         todos.map((todo, index) => (
-          <li className="task" key={`task-${todo.content}-${todo.createdTime}`}>
-            <div className="number"><span>{index + 1}</span></div>
-            <div className="content">
-              <p>{todo.content}</p>
-            </div>
-            {
-              todo.hasDone === false &&
-              <div className="action">
-                <button>Done</button>
-              </div>
-            }
-          </li>
+          <TodoTask
+            key={`task-${todo.content}-${todo.createdTime}`}
+            number={index + 1}
+            content={todo.content}
+            createdTime={todo.createdTime}
+            hasDone={todo.hasDone}
+          />
         ))
       }
     </ul>

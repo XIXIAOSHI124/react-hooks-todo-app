@@ -103,10 +103,17 @@ html {
 }
 
 .action button {
-  border: 1px solid #ffe600;
+  border: 1px solid #61dafb;
+  border-radius: .5rem;
+  color: #333333;
+  background-color: #fff;
+}
+
+.action button.done {
+  border: 1px solid lawngreen;
   border-radius: .5rem;
   color: #fff;
-  background-color: #fffb00;
+  background-color: forestgreen;
 }
 
 .number::before {
@@ -117,6 +124,10 @@ html {
 .content p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.content p.done {
+  text-decoration: line-through;
 }
 
 @keyframes App-logo-spin {
